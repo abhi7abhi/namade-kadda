@@ -3,9 +3,11 @@
  * Connects Next.js frontend to FastAPI backend
  */
 
+const CLOUD_BACKEND_URL = "https://namade-kadda.onrender.com/api/v1";
+
 export function normalizeApiUrl(rawUrl: string): string {
   const trimmed = rawUrl.trim().replace(/\/+$/, "");
-  if (!trimmed) return "http://127.0.0.1:8000/api/v1";
+  if (!trimmed) return CLOUD_BACKEND_URL;
   if (trimmed.endsWith("/api/v1")) return trimmed;
   if (trimmed.endsWith("/api")) return `${trimmed}/v1`;
   return `${trimmed}/api/v1`;
@@ -35,13 +37,13 @@ export function getApiBaseUrl(): string {
       }
     }
     const host = window.location.hostname || "localhost";
-    // If accessed through a public tunnel or custom proxy without explicit env URL, use relative /api/v1
+    // If accessed through a cloud domain (e.g., Vercel), default to the live Render backend
     if (host !== "localhost" && host !== "127.0.0.1" && !/^10\.|^192\.168\.|^172\.(1[6-9]|2\d|3[0-1])\./.test(host)) {
-      return "/api/v1";
+      return CLOUD_BACKEND_URL;
     }
     return `http://${host}:8000/api/v1`;
   }
-  return normalizeApiUrl(envUrl || "http://127.0.0.1:8000/api/v1");
+  return normalizeApiUrl(envUrl || (process.env.NODE_ENV === "production" ? CLOUD_BACKEND_URL : "http://127.0.0.1:8000/api/v1"));
 }
 
 export const API_BASE = (
