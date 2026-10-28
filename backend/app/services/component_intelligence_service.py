@@ -25,6 +25,8 @@ from app.schemas.component_intelligence import (
 
 class ComponentIntelligenceService:
 
+    _supplier_cache: Dict[Tuple[str, Optional[str], Optional[str]], List[ComponentMatchSupplierOut]] = {}
+
     # Static synonym lookup table
     SYNONYM_MAP: Dict[str, Tuple[str, str]] = {
         # Finished Products
@@ -697,6 +699,10 @@ class ComponentIntelligenceService:
         Never generates fake suppliers or fabricated ratings.
         """
         name_lower = component_name.lower()
+        cache_key = (name_lower, category.lower() if category else None, hint.lower() if hint else None)
+        if cache_key in cls._supplier_cache:
+            return cls._supplier_cache[cache_key]
+
         search_terms = [t for t in re.split(r"[\s\(\)/,]+", name_lower) if len(t) >= 3]
 
         # 1. Match catalog items directly
@@ -810,7 +816,9 @@ class ComponentIntelligenceService:
                     matching_products=[]
                 )
 
-        return list(supplier_map.values())[:4]
+        final_results = list(supplier_map.values())[:4]
+        cls._supplier_cache[cache_key] = final_results
+        return final_results
 
     @classmethod
     def export_to_bom(cls, db: Session, req: ExportToBOMRequest) -> ExportToBOMResponse:
