@@ -23,6 +23,6 @@ services:
       - key: JWT_SECRET
         generateValue: true # Render will automatically generate a secure 256-bit random secret
       - key: CORS_ORIGINS
-        value: "http://localhost:3000,https://*.vercel.app"
+        value: "https://namade-kadda.vercel.app,http://localhost:3000"
       - key: LLM_PROVIDER
         value: demo

@@ -52,6 +52,34 @@ async def lifespan(app: FastAPI):
             migrate(sqlite_file, settings.MONGODB_URL, settings.MONGODB_DATABASE)
         else:
             seed_database()
+
+    # Ensure component intelligence is seeded
+    if db["product_component_relationships"].count_documents({}) == 0:
+        logger.info("Seeding component intelligence data...")
+        from app.core.database import SessionLocal
+        from app.seed.seed_component_intelligence import seed_component_intelligence
+        sdb = SessionLocal()
+        try:
+            seed_component_intelligence(sdb)
+        except Exception as seed_err:
+            logger.warning(f"Error seeding component intelligence: {seed_err}")
+        finally:
+            sdb.close()
+
+    # Ensure matching and customer retention are seeded
+    if db["sourcing_requests"].count_documents({}) == 0:
+        logger.info("Seeding sourcing requests and matching data...")
+        from app.core.database import SessionLocal
+        from app.seed.seed_matching_data import seed_matching_data
+        from app.seed.seed_customer_retention import seed_customer_retention
+        sdb = SessionLocal()
+        try:
+            seed_matching_data(sdb)
+            seed_customer_retention(sdb)
+        except Exception as seed_err:
+            logger.warning(f"Error seeding matching data: {seed_err}")
+        finally:
+            sdb.close()
     logger.info("Namade Kadda API service startup complete on MongoDB Atlas.")
     yield
     logger.info("Closing MongoDB connections on service shutdown...")
@@ -142,6 +170,12 @@ def root():
         "status": "online",
         "ai_mode": "LIVE" if not settings.is_demo_mode else "DEMO"
     }
+
+
+@app.get("/health", tags=["Root"])
+def root_health():
+    from app.api.v1.health import health_check
+    return health_check()
 
 
 if __name__ == "__main__":
