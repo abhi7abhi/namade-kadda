@@ -1,0 +1,28 @@
+# Render Infrastructure as Code Blueprint for Namade Kadda Backend
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: namade-kadda-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/v1/health
+    autoDeploy: true
+    envVars:
+      - key: APP_NAME
+        value: "Namade Kadda API"
+      - key: APP_ENV
+        value: production
+      - key: DEBUG
+        value: "false"
+      - key: MONGODB_URL
+        sync: false # Enter your MongoDB Atlas connection string in the Render dashboard
+      - key: MONGODB_DATABASE
+        value: namade_kadda
+      - key: JWT_SECRET
+        generateValue: true # Render will automatically generate a secure 256-bit random secret
+      - key: CORS_ORIGINS
+        value: "http://localhost:3000,https://*.vercel.app"
+      - key: LLM_PROVIDER
+        value: demo

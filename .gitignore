@@ -1,0 +1,80 @@
+# =======================================================
+# Namade Kadda Monorepo .gitignore
+# =======================================================
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/venv/
+backend/.venv/
+venv/
+.venv/
+env/
+ENV/
+
+# Python byte code and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Next.js build outputs and caches
+.next/
+frontend/.next/
+out/
+frontend/out/
+frontend/build/
+*.tsbuildinfo
+next-env.d.ts
+
+# Production & Environment Variables (NEVER COMMIT SECRETS)
+.env
+.env.*
+!.env.example
+!backend/.env.example
+!frontend/.env.example
+backend/.env
+backend/.env.*
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Vercel
+.vercel
+frontend/.vercel
+
+# Local database files
+*.db
+*.sqlite
+*.sqlite3
+namade_kadda.db
+backend/namade_kadda.db
+
+# File uploads & runtime storage (preserve folder structure via .gitkeep)
+backend/uploads/*
+!backend/uploads/.gitkeep
+!backend/uploads/products/.gitkeep
+!backend/uploads/complaint_evidence/.gitkeep
+
+# System & IDE files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Logs & temp archives
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.zip

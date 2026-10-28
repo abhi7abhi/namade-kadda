@@ -1,0 +1,2986 @@
+{
+  "agent_run_events": {
+    "row_count": 93,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "run_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "agent_name",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "task",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "inputs",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "outputs",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "assumptions",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "warnings",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "mode",
+        "type": "VARCHAR(20)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "human_approval_required",
+        "type": "BOOLEAN",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "execution_order",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "agent_runs": {
+    "row_count": 16,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "run_code",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "request_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "prompt",
+        "type": "TEXT",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "provider",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "model",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "mode",
+        "type": "VARCHAR(20)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "status",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "summary",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "started_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "completed_at",
+        "type": "DATETIME",
+        "notnull": 0,
+        "pk": 0
+      }
+    ]
+  },
+  "audit_logs": {
+    "row_count": 37,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "action",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "entity_type",
+        "type": "VARCHAR(50)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "entity_id",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "details",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "user_email",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "bom_items": {
+    "row_count": 7,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "bom_project_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "part_name",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "description",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "material",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "dimensions",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "quantity",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "unit",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "manufacturing_process",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "estimated_unit_cost",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "total_cost",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "supplier_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "specification_status",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 13,
+        "name": "notes",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 14,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "bom_projects": {
+    "row_count": 2,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "title",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "description",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "sourcing_request_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "currency",
+        "type": "VARCHAR(10)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "total_estimated_cost",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "status",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "updated_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "catalog_items": {
+    "row_count": 28,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "supplier_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "name",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "part_number",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "category",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "description",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "unit_price",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "currency",
+        "type": "VARCHAR(10)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "moq",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "lead_time_days",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "material",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "specifications",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "origin_country",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 13,
+        "name": "available_quantity",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 14,
+        "name": "image_url",
+        "type": "VARCHAR(500)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 15,
+        "name": "manufacturing_capability",
+        "type": "VARCHAR(150)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 16,
+        "name": "in_stock",
+        "type": "BOOLEAN",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 17,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 18,
+        "name": "sku",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 19,
+        "name": "material_grade",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 20,
+        "name": "dimensions",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 21,
+        "name": "weight",
+        "type": "VARCHAR(50)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 22,
+        "name": "manufacturing_process",
+        "type": "VARCHAR(150)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 23,
+        "name": "customization_options",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 24,
+        "name": "certifications",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 25,
+        "name": "shipping_options",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 26,
+        "name": "status",
+        "type": "VARCHAR(50)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 27,
+        "name": "subcategory",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 28,
+        "name": "supported_destinations",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 29,
+        "name": "unit_of_measurement",
+        "type": "VARCHAR(50)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 30,
+        "name": "production_capacity",
+        "type": "VARCHAR(150)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 31,
+        "name": "stock_status",
+        "type": "VARCHAR(50)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 32,
+        "name": "datasheet_url",
+        "type": "VARCHAR(500)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 33,
+        "name": "technical_specifications",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 34,
+        "name": "updated_at",
+        "type": "DATETIME",
+        "notnull": 0,
+        "pk": 0
+      }
+    ]
+  },
+  "company_documents": {
+    "row_count": 1,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "user_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "supplier_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "document_type",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "document_title",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "description",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "original_filename",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "stored_filename",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "file_path",
+        "type": "VARCHAR(500)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "file_size",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "mime_type",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "status",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "rejection_reason",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 13,
+        "name": "reviewed_by",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 14,
+        "name": "reviewed_at",
+        "type": "DATETIME",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 15,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 16,
+        "name": "updated_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "complaint_evidence": {
+    "row_count": 0,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "complaint_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "file_name",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "stored_filename",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "file_path",
+        "type": "VARCHAR(500)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "file_size",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "mime_type",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "uploaded_by_user_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "uploaded_by_role",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "complaint_messages": {
+    "row_count": 0,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "complaint_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "sender_user_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "sender_role",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "sender_name",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "message",
+        "type": "TEXT",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "is_internal",
+        "type": "BOOLEAN",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "complaint_status_history": {
+    "row_count": 0,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "complaint_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "previous_status",
+        "type": "VARCHAR(50)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "new_status",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "changed_by_name",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "changed_by_role",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "notes",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "complaints": {
+    "row_count": 0,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "complaint_code",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "complainant_user_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "complainant_role",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "complainant_company_name",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "accused_company_name",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "accused_user_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "accused_supplier_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "category",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "subject",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "description",
+        "type": "TEXT",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "priority",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "status",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 13,
+        "name": "related_order_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 14,
+        "name": "related_rfq_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 15,
+        "name": "related_quotation_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 16,
+        "name": "assigned_admin_name",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 17,
+        "name": "internal_notes",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 18,
+        "name": "resolution_notes",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 19,
+        "name": "rejection_reason",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 20,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 21,
+        "name": "updated_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 22,
+        "name": "resolved_at",
+        "type": "DATETIME",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 23,
+        "name": "closed_at",
+        "type": "DATETIME",
+        "notnull": 0,
+        "pk": 0
+      }
+    ]
+  },
+  "negotiation_messages": {
+    "row_count": 2,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "rfq_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "quotation_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "supplier_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "order_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "buyer_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "sender_role",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "sender_name",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "message",
+        "type": "TEXT",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "action_type",
+        "type": "VARCHAR(50)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "proposed_price",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "proposed_quantity",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "proposed_currency",
+        "type": "VARCHAR(10)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 13,
+        "name": "proposed_lead_time_days",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 14,
+        "name": "proposed_delivery_date",
+        "type": "DATETIME",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 15,
+        "name": "proposed_payment_terms",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 16,
+        "name": "proposed_moq",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 17,
+        "name": "status",
+        "type": "VARCHAR(50)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 18,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "notifications": {
+    "row_count": 4,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "user_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "supplier_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "title",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "message",
+        "type": "TEXT",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "type",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "link_url",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "is_read",
+        "type": "BOOLEAN",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "order_items": {
+    "row_count": 18,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "order_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "item_name",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "quantity",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "unit_price",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "total_price",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "order_status_history": {
+    "row_count": 20,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "order_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "previous_status",
+        "type": "VARCHAR(50)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "new_status",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "changed_by",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "notes",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "orders": {
+    "row_count": 18,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "order_code",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "sourcing_request_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "quotation_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "supplier_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "total_amount",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "currency",
+        "type": "VARCHAR(10)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "status",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "expected_delivery_date",
+        "type": "DATETIME",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "shipping_address",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "tracking_number",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "notes",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 13,
+        "name": "updated_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "product_component_relationships": {
+    "row_count": 44,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "parent_name",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "parent_category",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "child_name",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "child_category",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "relationship_type",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "quantity",
+        "type": "NUMERIC(10, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "unit",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "typical_purpose",
+        "type": "TEXT",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "specification_details",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "verification_status",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "source",
+        "type": "VARCHAR(150)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "product_model_applicability",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 13,
+        "name": "estimated_cost_reference",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 14,
+        "name": "cost_currency",
+        "type": "VARCHAR(10)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 15,
+        "name": "supplier_category_hint",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 16,
+        "name": "subcomponents_json",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 17,
+        "name": "notes",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 18,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 19,
+        "name": "updated_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "quotation_items": {
+    "row_count": 5,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "quotation_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "item_name",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "description",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "quantity",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "unit_price",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "total_price",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "lead_time_days",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "quotations": {
+    "row_count": 21,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "quote_code",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "rfq_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "supplier_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "total_amount",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "currency",
+        "type": "VARCHAR(10)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "unit_price",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "moq",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "lead_time_days",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "shipping_estimate",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "payment_terms",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "validity_date",
+        "type": "DATETIME",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "notes",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 13,
+        "name": "status",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 14,
+        "name": "rejection_reason",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 15,
+        "name": "acceptance_reason",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 16,
+        "name": "comparison_score",
+        "type": "NUMERIC(5, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 17,
+        "name": "score_breakdown",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 18,
+        "name": "missing_fields",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 19,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 20,
+        "name": "updated_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 21,
+        "name": "incoterms",
+        "type": "VARCHAR(50)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 22,
+        "name": "estimated_shipping_cost",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 23,
+        "name": "discounts",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 24,
+        "name": "tax_amount",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 25,
+        "name": "warranty_info",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 26,
+        "name": "packaging_details",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 27,
+        "name": "technical_deviations",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 28,
+        "name": "revision_number",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 29,
+        "name": "parent_quotation_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      }
+    ]
+  },
+  "rfq_suppliers": {
+    "row_count": 18,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "rfq_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "supplier_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "status",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "invited_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "decline_reason",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "clarification_questions",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "responded_at",
+        "type": "DATETIME",
+        "notnull": 0,
+        "pk": 0
+      }
+    ]
+  },
+  "rfqs": {
+    "row_count": 24,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "rfq_code",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "sourcing_request_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "title",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "status",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "issue_date",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "deadline_date",
+        "type": "DATETIME",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "terms",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "notes",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "updated_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "saved_component_searches": {
+    "row_count": 78,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "user_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "query",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "search_mode",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "detected_type",
+        "type": "VARCHAR(50)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "result_count",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "notes",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "sourcing_requests": {
+    "row_count": 25,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "request_code",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "title",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "raw_input",
+        "type": "TEXT",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "status",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "user_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "category",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "quantity",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "unit",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "target_budget",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "currency",
+        "type": "VARCHAR(10)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "destination_country",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "destination_city",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 13,
+        "name": "required_delivery_date",
+        "type": "VARCHAR(50)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 14,
+        "name": "manufacturing_process",
+        "type": "VARCHAR(150)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 15,
+        "name": "material_grade",
+        "type": "VARCHAR(150)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 16,
+        "name": "dimensions",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 17,
+        "name": "tolerances",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 18,
+        "name": "required_certifications",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 19,
+        "name": "notes",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 20,
+        "name": "confidence_score",
+        "type": "NUMERIC(3, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 21,
+        "name": "extraction_metadata",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 22,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 23,
+        "name": "updated_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "supplier_capabilities": {
+    "row_count": 13,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "supplier_id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "category",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "process_type",
+        "type": "VARCHAR(150)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "materials",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "certifications",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      }
+    ]
+  },
+  "suppliers": {
+    "row_count": 12,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "name",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "slug",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "description",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "country",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "city",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "address",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "website",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "contact_email",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "phone",
+        "type": "VARCHAR(50)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "moq",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "lead_time_days",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "price_rating",
+        "type": "VARCHAR(10)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 13,
+        "name": "is_verified",
+        "type": "BOOLEAN",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 14,
+        "name": "verification_status",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 15,
+        "name": "rating",
+        "type": "NUMERIC(3, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 16,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 17,
+        "name": "updated_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 18,
+        "name": "legal_business_name",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 19,
+        "name": "state_region",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 20,
+        "name": "years_of_operation",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 21,
+        "name": "business_type",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 22,
+        "name": "factory_location",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 23,
+        "name": "export_countries",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 24,
+        "name": "languages_supported",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 25,
+        "name": "production_capacity",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 26,
+        "name": "materials_supported",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 27,
+        "name": "certifications_documents",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 28,
+        "name": "business_registration_number",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 29,
+        "name": "verification_request_status",
+        "type": "VARCHAR(50)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 30,
+        "name": "verification_rejection_reason",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 31,
+        "name": "profile_completeness",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 32,
+        "name": "verification_submitted_at",
+        "type": "DATETIME",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 33,
+        "name": "verification_reviewed_at",
+        "type": "DATETIME",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 34,
+        "name": "products_sold",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 35,
+        "name": "product_categories",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 36,
+        "name": "reviewed_by",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 37,
+        "name": "suspension_reason",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 38,
+        "name": "removal_reason",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 39,
+        "name": "more_info_requested",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      }
+    ]
+  },
+  "trade_assessments": {
+    "row_count": 15,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "sourcing_request_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "origin_country",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "destination_country",
+        "type": "VARCHAR(100)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "product_description",
+        "type": "TEXT",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "declared_value",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "currency",
+        "type": "VARCHAR(10)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "hs_code_candidate",
+        "type": "VARCHAR(50)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "estimated_duty_rate",
+        "type": "NUMERIC(5, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "estimated_tax_rate",
+        "type": "NUMERIC(5, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "freight_insurance_estimate",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "duty_estimate",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "tax_estimate",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 13,
+        "name": "total_landed_estimate",
+        "type": "NUMERIC(12, 2)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 14,
+        "name": "compliance_checklist",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 15,
+        "name": "disclaimer",
+        "type": "TEXT",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 16,
+        "name": "source_basis",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 17,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      }
+    ]
+  },
+  "users": {
+    "row_count": 13,
+    "columns": [
+      {
+        "cid": 0,
+        "name": "id",
+        "type": "INTEGER",
+        "notnull": 1,
+        "pk": 1
+      },
+      {
+        "cid": 1,
+        "name": "email",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 2,
+        "name": "hashed_password",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 3,
+        "name": "full_name",
+        "type": "VARCHAR(255)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 4,
+        "name": "role",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 5,
+        "name": "company_name",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 6,
+        "name": "country",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 7,
+        "name": "business_category",
+        "type": "VARCHAR(100)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 8,
+        "name": "contact_phone",
+        "type": "VARCHAR(50)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 9,
+        "name": "supplier_id",
+        "type": "INTEGER",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 10,
+        "name": "verification_status",
+        "type": "VARCHAR(50)",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 11,
+        "name": "is_active",
+        "type": "BOOLEAN",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 12,
+        "name": "created_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 13,
+        "name": "updated_at",
+        "type": "DATETIME",
+        "notnull": 1,
+        "pk": 0
+      },
+      {
+        "cid": 14,
+        "name": "admin_id",
+        "type": "VARCHAR(50)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 15,
+        "name": "sourcing_categories",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 16,
+        "name": "verification_rejection_reason",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 17,
+        "name": "verification_submitted_at",
+        "type": "DATETIME",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 18,
+        "name": "verification_reviewed_at",
+        "type": "DATETIME",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 19,
+        "name": "reviewed_by",
+        "type": "VARCHAR(255)",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 20,
+        "name": "suspension_reason",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 21,
+        "name": "removal_reason",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      },
+      {
+        "cid": 22,
+        "name": "more_info_requested",
+        "type": "TEXT",
+        "notnull": 0,
+        "pk": 0
+      }
+    ]
+  }
+}

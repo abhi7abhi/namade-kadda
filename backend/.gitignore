@@ -1,0 +1,39 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Secrets & Environment variables
+.env
+.env.*
+!.env.example
+
+# Local SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+namade_kadda.db
+
+# Uploads
+uploads/*
+!.gitkeep
+!uploads/.gitkeep
+!uploads/products/.gitkeep
+!uploads/complaint_evidence/.gitkeep
+
+# System & Editor
+.DS_Store
+*.log
